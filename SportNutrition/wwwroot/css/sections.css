@@ -1,0 +1,228 @@
+﻿/* ------Контейнер hero ---------*/
+.hero {
+    top: 170px;
+    position: relative;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 2rem;
+    max-width: calc(100% - 2cm); /* по 4 см отступа с каждой стороны */
+    background-color: #131111; /* черный фон */
+    border-radius: 8px;
+    box-shadow: 0 6px 9px rgba(0, 0, 0, 0.2);
+}
+/* Стили для overlay в секции hero */
+.overlay-tut {
+    text-align: center;
+    color: #F2E9E4;
+    max-width: 800px;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+/* ------Контейнер hero END---------*/
+
+/* ------Секция О Нас в стиле hero---------*/
+.about-hero {
+    top: 170px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: calc(100% - 2cm); /* по 4 см отступа с каждой стороны */
+    background-color: #131111;
+    border-radius: 8px;
+    box-shadow: 0 6px 9px rgba(0, 0, 0, 0.2);
+}
+.overlay-about {
+    color: #F2E9E4;
+    max-width: 800px;
+    text-align: center;
+}
+.about-hero h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #F2E9E4;
+}
+.about-hero p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #C9ADA7;
+}
+.about-hero strong {
+    color: #ff7e5f; /* выделение ключевых слов */
+}
+/* ------Секция О Нас в стиле hero END---------*/
+
+/*------ Стиль прокрутки изображений------*/
+.carousel-container {
+    top: 170px;
+    position: relative;
+    max-width: calc(100% - 2cm); /* Отступы по бокам */
+    margin: 2rem auto; /* Центрируем слайдер и отступ сверху и снизу */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 9px rgba(0, 0, 0, 0.2);
+}
+.carousel-item img {
+    border-radius: 8px;
+}
+/*------ Стиль прокрутки изображений END------*/
+
+/*-----Стиль секции Контакты---------*/
+.contacts-section {
+    top: 170px;
+    position: relative;
+    padding: 40px;
+    background-color: #131111;
+    color: #956652;
+    margin: 20px auto;
+    max-width: calc(100% - 2cm);
+    border-radius: 8px;
+}
+.contacts-container {
+    display: flex;
+    justify-content: space-between; /* Распределяем блоки по сторонам */
+    gap: 20px;
+    align-items: center
+}
+.contact-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Центрируем содержимое по вертикали */
+    align-items: flex-start; /* Выравниваем текст по левому краю */
+}
+.contact-info p {
+    margin: 5px 0;
+    font-size: 20px;
+}
+.contact-info p i {
+    color: #543622; /* Цвет иконок */
+    margin-right: 8px;
+}
+
+.map {
+    flex: 1; /* Карта будет занимать пространство справа */
+    display: flex;
+    justify-content: flex-end; /* Располагаем карту справа */
+}
+.map iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    border-radius: 15px; /* Округлые края карты */
+    /*filter: invert(1);*/
+}
+/*-----Стиль секции Контакты END---------*/
+
+/* ------Секция Наши Услуги---------*/
+.services-section {
+    top: 170px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: calc(100% - 2cm); /* по 4 см отступа с каждой стороны */
+    background-color: #131111;
+    border-radius: 8px;
+    box-shadow: 0 6px 9px rgba(0, 0, 0, 0.2);
+}
+.overlay-services {
+    color: #F2E9E4;
+    max-width: 800px;
+    text-align: center;
+}
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.service-item {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+.service-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #ff7e5f;
+}
+.service-item p {
+    font-size: 1rem;
+    color: #C9ADA7;
+}
+.service-item i {
+    font-size: 2rem;
+    color: #ff7e5f;
+    margin-bottom: 0.5rem;
+}
+/* ------Секция Наши Услуги END---------*/
+
+/* ------Секция Написать сообщение---------*/
+.contact-form-section {
+    top: 170px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: calc(100% - 2cm); /* по 4 см отступа с каждой стороны */
+    background-color: #131111;
+    border-radius: 8px;
+    box-shadow: 0 6px 9px rgba(0, 0, 0, 0.2);
+}
+.overlay-contact-form {
+    color: #F2E9E4;
+    max-width: 800px;
+    text-align: center;
+}
+.contact-form-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #F2E9E4;
+}
+.form-group {
+    margin-bottom: 1.5rem;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #F2E9E4;
+}
+.form-control {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid #C9ADA7;
+    background-color: #1e1e1e;
+    color: #F2E9E4;
+}
+.btn-primary {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    border: 1px solid #ff7e5f;
+    background-color: #1e1e1e;
+    color: #F2E9E4;
+}
+.btn-primary:hover {
+    background-color: #ff937f;
+}
+/* ------Секция Написать сообщение END---------*/
+

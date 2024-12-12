@@ -1,0 +1,162 @@
+﻿/* Контейнер для модального окна */
+.container-login-registration {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    flex-direction: column;
+    animation: fadeIn 0.3s ease-in-out; /* Анимация плавного появления */
+}
+
+/* Плавное появление */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.container-login-registration.active {
+    display: flex;
+}
+
+/* Оверлей для затемнения фона */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}
+
+/* Стиль формы, похожий на hero */
+.form-box {
+    background-color: #131111; /* Темный фон, как у hero */
+    padding: 2rem;
+    width: 450px; /* Уменьшенная ширина */
+    box-shadow: 0 6px 9px rgba(0, 0, 0, 0.5); /* Тень, как у hero */
+    backdrop-filter: blur(2px); /* Эффект размытия фона */
+    position: relative;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px; /* Округлённые углы */
+    color: #f2e9e4; /* Светлый текст */
+    animation: slideIn 0.4s ease-out; /* Анимация скольжения */
+}
+
+/* Плавное скольжение формы */
+@keyframes slideIn {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.form-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #f2e9e4;
+}
+
+label {
+    display: block;
+    margin-bottom: 15px;
+    width: 100%;
+    position: relative;
+}
+
+label input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #8f7265; /* Используем цветовую палитру сайта */
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 5px;
+    background-color: #543622; /* Темный фон для полей ввода */
+    color: #f2e9e4;
+    transition: border-color 0.3s ease-in-out; /* Плавный переход */
+}
+
+label input:focus {
+    border-color: #725444; /* Изменение цвета границы при фокусе */
+    outline: none;
+}
+
+label span {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    color: #c9ada7;
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.form-btn {
+    background-color: #725444;
+    color: #f2e9e4;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s; /* Анимация изменения фона и трансформации */
+}
+
+.form-btn:hover {
+    background-color: #8f7265;
+    transform: scale(1.05); /* Увеличение кнопки при наведении */
+}
+
+/* Стили для ошибок */
+.error {
+    color: red;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+/* Скрытие формы по умолчанию */
+.form_signin, .form_signup {
+    display: none;
+}
+
+/* Отображение только активной формы */
+.form_signin.active, .form_signup.active {
+    display: block;
+}
+
+/* Стиль для крестика */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #f2e9e4;
+    cursor: pointer;
+    z-index: 1002; /* Размещаем выше формы */
+    transition: color 0.3s ease-in-out;
+}
+
+.close-btn:hover {
+    color: #725444; /* Изменение цвета при наведении */
+}

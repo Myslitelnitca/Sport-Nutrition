@@ -1,0 +1,234 @@
+html {
+    font-size: 14px;
+}
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    background-color: #252323; /* темный фон */
+    color: #fff; /* белый текст */
+}
+a {
+    color: #ff7e5f; /* яркий цвет для ссылок */
+}
+h1, h2, h3 {
+    color: #F2E9E4; /* светлый цвет для заголовков */
+}
+
+
+/*---------!!! Header Styles !!!----------*/
+.header {
+    display: flex;
+    justify-content: center;/* Центрирует всё содержимое в header */
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    position: fixed; /* Фиксируем шапку */
+    background-color: rgba(19, 17, 17, 0.7); /* Тёмный полупрозрачный фон */
+    backdrop-filter: blur(2px); /* Эффект размытия фона */
+    z-index: 1000; /* Чтобы шапка была поверх остальных элементов */
+    box-shadow: 1px 1px 12px rgb(255, 84, 84),
+    1px 2px 8px rgb(255, 84, 84),
+    1px 4px 10px rgb(255, 84, 84),
+    1px 8px 29px rgb(255, 84, 84);
+}
+
+.logo h1 {
+    font-family: "Comic Sans MS";
+    font-size: 1.5rem;
+    color: #fff;
+    margin-right: 2rem; /* Отступ между логотипом и навигацией */
+}
+
+/* ---------Подсветка для шапки ----------*/
+.header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #725444; /* кофейный цвет подсветки */
+    opacity: 0.4; /* начальная прозрачность */
+    transition: opacity 0.3s ease; /* плавное изменение яркости */
+    z-index: -1; /* Подсветка за содержимым header */
+}
+.header:hover::after {
+    opacity: 5; /* яркость подсветки при наведении */
+}
+/* ---------Подсветка для шапки END----------*/
+
+/*--------Меню навигации кнопок в Header ----------*/
+.navigation {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; /* Центрирует кнопки навигации */
+    align-items: center;
+}
+.navigation ul {
+    display: flex;
+    list-style: none; /* Убирает маркеры списка */
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+    align-items: center; /* Выровняет кнопки в навигации по центру */
+}
+.navigation a,
+.navigation button {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    align-items: center; /* Выровняет текст внутри кнопок по центру по вертикали */
+}
+/*--------Меню навигации кнопок в Header END----------*/
+
+/* ----------Основной стиль кнопки в Шапке сайта-----------*/
+.btn {
+    font-family: "Verdana", sans-serif; /* шрифт */
+    background-color: #725444; /* кофейный цвет */
+    color: #F2E9E4; /* светлый бежевый */
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+/* Эффект при наведении */
+.btn:hover {
+    background-color: #8F7265;
+    transform: scale(1.1);
+}
+/* Эффект при нажатии */
+.btn:active {
+    background-color: #543622;
+    transform: scale(0.95);
+}
+/* Эффект фокуса */
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 10px #C9ADA7;
+}
+/* ----------Основной стиль кнопки в Шапке сайта END-----------*/
+
+/*----------Основной стиль для кнопки-иконки -------------*/
+.btn-icon {
+    background-color: #725444;
+    color: #F2E9E4;
+    border: none;
+    border-radius: 50%;
+    padding: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Эффект при наведении */
+.btn-icon:hover {
+    background-color: #8F7265;
+    transform: scale(1.1);
+}
+/* Эффект при нажатии */
+.btn-icon:active {
+    background-color: #543622;
+    transform: scale(0.95);
+}
+/* Эффект фокуса */
+.btn-icon:focus {
+    outline: none;
+    box-shadow: 0 0 10px #C9ADA7;
+}
+/*----------Основной стиль для кнопки-иконки END-------------*/
+
+/* -----Адаптивные стили ------*/
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+    /* ---------Стили навигации ------------*/
+    .navigation ul {
+        display: flex;
+        gap: 1.5rem;
+    }
+    .auth-cart button {
+        padding: 0.5rem;
+        margin: 0.5rem 0;
+    }
+    .logo h1 {
+        font-size: 1.25rem;
+    }
+    .btn-register, .btn, .btn-icon {
+        padding: 10px;
+        font-size: 14px;
+    }
+    .header, .navigation, .auth-cart {
+        width: 100%;
+    }
+}
+/* ---------Стили навигации END ------------*/
+@media (max-width: 480px) {
+    .btn-register, .btn, .btn-icon {
+        padding: 8px;
+        font-size: 12px;
+    }
+    .header, .navigation, .auth-cart {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+img {
+    /* Гибкие стили для изображений */
+    max-width: 100%;
+    height: auto;
+}
+/* -----Адаптивные стили END------*/
+
+/* --------Dropdown Menu Styling ----------*/
+.dropdown-menu {
+    display: none !important; /* Строгое скрытие меню */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 0.5rem 0;
+    list-style: none;
+    width: 8rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 0; /* Убираем отступы */
+}
+.dropdown-menu li {
+    padding: 0.5rem 1rem;
+}
+.dropdown-menu li:hover {
+    background-color: #8F7265;
+}
+/* Показывает меню при наведении на элемент с классом .dropdown */
+.dropdown:hover .dropdown-menu {
+    display: block !important; /* Строгое отображение меню при наведении */
+}
+/* --------Dropdown Menu Styling END ----------*/
+
+/*---------!!! Header Styles END!!!----------*/
+
+
+
+
+
+

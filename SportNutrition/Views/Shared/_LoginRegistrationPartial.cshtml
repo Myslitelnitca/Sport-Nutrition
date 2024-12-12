@@ -1,0 +1,48 @@
+﻿<link rel="stylesheet" href="~/css/login_and_registration.css" asp-append-version="true"/>
+<link rel="stylesheet" href="~/css/header.css" asp-append-version="true"/>
+<div class="container-login-registration">
+    <div class="form-box">
+        <div class="close-btn">&#10005;</div> <!-- Крестик для закрытия -->
+        <!-- Форма входа -->
+        <form class="form form_signin active"> <!-- "active" по умолчанию у формы входа -->
+            <h3 class="form-title">Войти</h3>
+            <label for="signin-email">
+                <input type="email" id="signin-email" required=""/>
+                <span>Почта</span>
+            </label>
+            <label for="signin-password">
+                <input type="password" id="signin-password" required=""/>
+                <span>Пароль</span>
+            </label>
+            <div class="form-btn form_btn_signin" id="signin_btn">Войти</div>
+            <div id="error-messages-signin"></div>
+        </form>
+
+        <!-- Форма регистрации -->
+        <form class="form form_signup"> <!-- По умолчанию скрыта, без "active" -->
+            <h3 class="form-title">Регистрация</h3>
+            <label for="signup-login">
+                <input type="text" id="signup-login" required=""/>
+                <span>Логин</span>
+            </label>
+            <label for="signup-email">
+                <input type="email" id="signup-email" required=""/>
+                <span>Почта</span>
+            </label>
+            <label for="signup-password">
+                <input type="password" id="signup-password" required=""/>
+                <span>Пароль</span>
+            </label>
+            <label for="signup-confirm-password">
+                <input type="passwordConfirm" id="signup-confirm-password" required=""/>
+                <span>Подтвердите пароль</span>
+            </label>
+            <div class="form-btn form_btn_signup">Зарегистрироваться</div>
+            <div id="error-messages-signup"></div>
+        </form>
+    </div>
+    <div class="overlay" style="display: block;"></div>
+</div>
+
+
+<script src="~/js/login_and_registration.js" asp-append-version="true"></script>
