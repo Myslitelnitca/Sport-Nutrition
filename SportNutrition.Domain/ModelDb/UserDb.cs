@@ -22,7 +22,7 @@ namespace SportNutrition.Domain.ModelDb
         public Role Role { get; set; }
         
         [Column("pathimage")]
-        public string PathImaage { get; set; }
+        public string PathImage { get; set; }
         
         [Column("createdAt", TypeName = "timestamp")]
         public DateTime CreatedAt { get; set; }
