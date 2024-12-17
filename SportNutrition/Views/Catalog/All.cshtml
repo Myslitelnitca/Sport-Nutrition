@@ -1,0 +1,16 @@
+﻿@model List<SportNutrition.Domain.ViewModels.CatalogViewModel>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+@if (Model.Count > 0)
+{
+    @foreach (var item in Model)
+    {
+        <h1>@item.Name</h1>
+        <p>@item.Description</p>
+        <p>@item.Image</p>
+    }
+}
