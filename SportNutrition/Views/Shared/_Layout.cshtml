@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>@ViewData["Title"] - SportsNutrition</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"/>
     <link rel="stylesheet" href="~/css/header.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/css/footer.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/css/sign-btn.css" asp-append-version="true"/>
@@ -30,19 +31,28 @@
             </li>
             <li><button class="btn"><a href="#about">О Нас</a></button></li>
             <li><button class="btn"><a href="#contact">Контакты</a></button></li>
+            
         </ul>
+        <form class="d-flex search-form" action="/search" method="get">
+            <input class="form-control me-2 search-input" type="search" name="query" placeholder="Поиск..." aria-label="Search">
+            <button class="btn btn-outline-light search-button" type="submit">
+                <span class="bi bi-search"></span> <!-- Иконка лупы -->
+            </button>
+        </form>
     </nav>
     <div class="auth-cart">
         <button id="loginBtn" class="signin-btn">Войти</button>
         <button id="registerBtn" class="signup-btn">Зарегистрироваться</button>
     </div>
 
-    <button id="cartBtn" class="btn-icon">
-        <!-- SVG иконка корзины -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#F2E9E4" viewBox="0 0 24 24">
-            <path d="M7 4h10l1 9h-12l1-9zm-1.646-2h13.292l1.176 10h-15.644l1.176-10zm1.646 14c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-        </svg>
-    </button>
+    <a href="/Cart/Cartss">
+        <button id="cartBtn" class="btn-icon">
+            <!-- SVG иконка корзины -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#F2E9E4" viewBox="0 0 24 24">
+                <path d="M7 4h10l1 9h-12l1-9zm-1.646-2h13.292l1.176 10h-15.644l1.176-10zm1.646 14c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+            </svg>
+        </button>
+    </a>
 </header>
 <body>
 <div class="container">

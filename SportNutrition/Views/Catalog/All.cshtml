@@ -1,16 +1,69 @@
 ﻿@model List<SportNutrition.Domain.ViewModels.CatalogViewModel>
 
-@{
-    ViewBag.Title = "title";
-    Layout = "_Layout";
-}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог товаров</title>
+    <link rel="stylesheet" href="~/css/catalog.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
+</head>
+<body>
 
-@if (Model.Count > 0)
-{
-    @foreach (var item in Model)
-    {
-        <h1>@item.Name</h1>
-        <p>@item.Description</p>
-        <p>@item.Image</p>
-    }
-}
+<main class="container my-5">
+    <h1 class="text-center mb-4">Каталог товаров</h1>
+
+    <div class="row">
+        <!-- Пример товара 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="product-card">
+                <img src="/img/catalog/whey.jpg" alt="Товар 1">
+                <div class="product-card-body">
+                    <p class="product-title">Протеин Whey</p>
+                    <p class="product-price">3000 ₽</p>
+                    <p class="product-description">Высококачественный протеин для набора мышечной массы и восстановления после тренировок.</p>
+                </div>
+                <div class="product-card-footer">
+                    <button class="btn-add-to-cart">Добавить в корзину</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Пример товара 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="product-card">
+                <img src="/img/catalog/bcaa.jpg" alt="Товар 2">
+                <div class="product-card-body">
+                    <p class="product-title">Аминокислоты BCAA</p>
+                    <p class="product-price">1500 ₽</p>
+                    <p class="product-description">Аминокислоты для восстановления и защиты мышц во время тренировок.</p>
+                </div>
+                <div class="product-card-footer">
+                    <button class="btn-add-to-cart">Добавить в корзину</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Пример товара 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="product-card">
+                <img src="/img/catalog/vita.jpg" alt="Товар 3">
+                <div class="product-card-body">
+                    <p class="product-title">Витамины для спортсменов</p>
+                    <p class="product-price">1200 ₽</p>
+                    <p class="product-description">Комплекс витаминов для поддержания здоровья и энергии на протяжении всего дня.</p>
+                </div>
+                <div class="product-card-footer">
+                    <button class="btn-add-to-cart" onclick="addToCart(this)">Добавить в корзину</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/cart.js" asp-append-version="true"></script>
+</body>
+</html>

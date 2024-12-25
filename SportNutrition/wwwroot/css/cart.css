@@ -1,0 +1,113 @@
+﻿/* Общие стили для страницы */
+body {
+    padding-top: 90px; /* Учитываем высоту шапки */
+    background-color: #F2E9E4; /* Светлый фон для всей страницы */
+    font-family: Arial, sans-serif;
+}
+
+/* Стили для товаров в корзине */
+.cart-item {
+    background-color: #131111; /* Черный фон */
+    border-radius: 8px;
+    box-shadow: 0 6px 9px rgba(0, 0, 0, 0.2); /* Тень */
+    overflow: hidden;
+    padding: 2rem;
+    max-width: calc(100% - 2cm); /* Отступы по бокам */
+    margin: 2rem auto;
+    top: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart-item img {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.cart-item-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #F2E9E4; /* Светлый текст */
+}
+
+.cart-item-price {
+    color: #f56a00;
+    font-size: 1.3rem;
+}
+
+.cart-item .quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-item .quantity button {
+    background-color: #543622;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.cart-item .quantity button:hover {
+    background-color: #725444;
+}
+
+.cart-item .quantity-value {
+    font-size: 1.3rem;
+    color: #F2E9E4;
+}
+
+.cart-item .btn-remove {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.cart-item .btn-remove:hover {
+    background-color: #e53935;
+}
+
+/* Стили для общей стоимости */
+.cart-total {
+    margin-top: 30px;
+    font-size: 1.5rem;
+    color: #543622; /* Темный цвет для общей суммы */
+}
+
+.cart-total span {
+    font-size: 1.6rem;
+    color: #F56A00; /* Яркий оранжевый цвет для суммы */
+}
+
+/* Кнопка оформления заказа */
+.btn-checkout {
+    background-color: #543622;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.btn-checkout:hover {
+    background-color: #725444;
+}
+
+/* Выравнивание элементов */
+.text-center {
+    text-align: center;
+}
+
+.text-end {
+    text-align: right;
+}

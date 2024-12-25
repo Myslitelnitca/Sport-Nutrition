@@ -27,6 +27,8 @@ h1, h2, h3 {
 
 /*---------!!! Header Styles !!!----------*/
 .header {
+    margin-top: 0; /* Убираем отступ сверху */
+    top: 0;
     display: flex;
     justify-content: center;/* Центрирует всё содержимое в header */
     align-items: center;
@@ -226,6 +228,26 @@ img {
 /* --------Dropdown Menu Styling END ----------*/
 
 /*---------!!! Header Styles END!!!----------*/
+
+form.d-flex {
+    max-width: 400px;
+    margin-left: auto; /* Отодвигаем строку поиска к правой стороне */
+}
+.search-form {
+    max-width: 400px; /* Ограничение ширины формы */
+    margin-left: auto; /* Сдвигает форму вправо */
+}
+
+.search-input {
+    flex: 1; /* Заставляет поле занимать доступное пространство */
+    min-width: 150px; /* Минимальная ширина для мобильных устройств */
+}
+
+.search-button {
+    padding: 0 10px; /* Сужает кнопку с лупой */
+    display: flex;
+    align-items: center; /* Центрирует иконку по вертикали */
+}
 
 
 

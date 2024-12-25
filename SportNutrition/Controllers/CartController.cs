@@ -3,9 +3,9 @@ using SportNutrition.Domain.ViewModels;
 
 namespace SportNutrition.Controllers;
 
-public class CatalogController : Controller
+public class CartController : Controller
 {
-    public IActionResult All()
+    public IActionResult Cartss()
     {
         List<CatalogViewModel> g = new List<CatalogViewModel>();
         g.Add(new CatalogViewModel()
@@ -22,8 +22,6 @@ public class CatalogController : Controller
             Image = "/catalog/test2.jpg"
         });
         
-        return View(g);
+        return View();
     }
-    
-    
 }

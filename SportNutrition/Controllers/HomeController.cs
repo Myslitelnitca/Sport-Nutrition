@@ -1,7 +1,6 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using SportNutrition.Domain.ViewModels.LoginAndRegistration;
-using SportNutrition.Domain.SendMess;
 using System.Net; 
 using System.Net.Mail;
 using System.Threading.Tasks;
