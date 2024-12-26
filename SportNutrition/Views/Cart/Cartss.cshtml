@@ -35,13 +35,32 @@
             </div>
         </div>
 
+        <div class="cart-item row mb-3">
+            <div class="col-md-4">
+                <img src="/img/catalog/vita.jpg" alt="Витамины для спортсменов" class="img-fluid">
+            </div>
+            <div class="col-md-4">
+                <p class="cart-item-title">Витамины для спортсменов</p>
+                <p class="cart-item-price">1200 ₽</p>
+            </div>
+            <div class="col-md-2">
+                <div class="quantity">
+                    <button class="btn btn-secondary btn-sm" onclick="decreaseQuantity(this)">-</button>
+                    <span class="quantity-value">1</span>
+                    <button class="btn btn-secondary btn-sm" onclick="increaseQuantity(this)">+</button>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-danger btn-sm" onclick="removeItem(this)">Удалить</button>
+            </div>
+        </div>
         <!-- Другие товары можно добавить по аналогии -->
 
     </div>
 
     <!-- Общая стоимость -->
     <div class="cart-total">
-        <h3 class="text-end">Итого: <span id="total-price">3000 ₽</span></h3>
+        <h3 class="text-end">Итого: <span id="total-price">4200 ₽</span></h3>
     </div>
 
     <!-- Кнопка оформления заказа -->
