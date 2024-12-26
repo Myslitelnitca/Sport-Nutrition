@@ -1,0 +1,39 @@
+﻿@model List<SportNutrition.Domain.ViewModels.UserProfileViewModel>
+
+<link rel="stylesheet" href="~/css/profile.css" asp-append-version="true"/>
+@{
+    ViewData["Title"] = "Профиль";
+}
+
+<div class="profile-container">
+    <!-- Верхняя секция с информацией -->
+    <div class="profile-header">
+        <div class="avatar">
+            <!-- Добавляем изображение аватарки -->
+            <img src="/img/user-image.jpg" alt="User Avatar" class="avatar-img">
+        </div>
+        <div class="user-info">
+            <h1>Виктория Шурдук</h1>
+            <p>vikuliashurduk@gmail.com</p>
+        </div>
+    </div>
+
+    <!-- Основная секция -->
+    <div class="profile-body">
+        <h2>Личная информация</h2>
+        <div class="info-item">
+            <span>Дата рождения:</span>
+            <span>08.12.2006</span>
+        </div>
+        <div class="info-item">
+            <span>Пол:</span>
+            <span>Женский</span>
+        </div>
+        <div class="info-item">
+            <span>Зарегистрирована:</span>
+            <span>06.12.2024</span>
+        </div>
+
+        <button class="edit-profile-btn">Редактировать профиль</button>
+    </div>
+</div>

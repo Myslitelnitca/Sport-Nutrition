@@ -31,18 +31,23 @@
             </li>
             <li><button class="btn"><a href="#about">О Нас</a></button></li>
             <li><button class="btn"><a href="#contact">Контакты</a></button></li>
-            
+
         </ul>
-        <form class="d-flex search-form" action="/search" method="get">
-            <input class="form-control me-2 search-input" type="search" name="query" placeholder="Поиск..." aria-label="Search">
-            <button class="btn btn-outline-light search-button" type="submit">
-                <span class="bi bi-search"></span> <!-- Иконка лупы -->
-            </button>
-        </form>
     </nav>
+    <form class="d-flex search-form" action="/search" method="get">
+        <input class="form-control me-2 search-input" type="search" name="query" placeholder="Поиск..." aria-label="Search">
+        <button class="btn btn-outline-light search-button" type="submit">
+            <span class="bi bi-search"></span> <!-- Иконка лупы -->
+        </button>
+    </form>
     <div class="auth-cart">
+        <!--
         <button id="loginBtn" class="signin-btn">Войти</button>
         <button id="registerBtn" class="signup-btn">Зарегистрироваться</button>
+        -->
+        <a href="@Url.Action("User","Profile")" class="btn-icons">
+            <img src="/img/user-image.jpg" alt="Profile Picture" class="profile-picture">
+        </a>
     </div>
 
     <a href="/Cart/Cartss">

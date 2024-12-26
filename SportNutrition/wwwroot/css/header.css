@@ -246,11 +246,80 @@ form.d-flex {
 .search-button {
     padding: 0 10px; /* Сужает кнопку с лупой */
     display: flex;
+    margin-right: 20px; /* Отступ между кнопками */
     align-items: center; /* Центрирует иконку по вертикали */
 }
 
+/*--------------прикол конечно-------------------*/
+
+.btn-icons {
+    color: #F2E9E4;
+    border: none;
+    border-radius: 50%;
+    padding: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px; /* Отступ между кнопками */
+}
+
+/* Убираем коричневый ободок */
+.profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    outline: none; /* Убираем ободок */
+}
+
+/* Эффект при наведении */
+.btn-icons:hover {
+    background-color: #8F7265;
+    transform: scale(1.1);
+}
+
+/* Эффект при нажатии */
+.btn-icons:active {
+    background-color: #543622;
+    transform: scale(0.95);
+}
+
+/* Эффект фокуса */
+.btn-icons:focus {
+    outline: none;
+    box-shadow: 0 0 10px #C9ADA7;
+}
 
 
+/* Медиазапрос для мобильных устройств */
+@media (max-width: 1000px) {
+    .auth-cart {
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Выравнивание по центру */
+        gap: 10px; /* Промежуток между иконками */
+    }
+}
 
+/* Медиазапрос для экранов менее 768px */
+@media (max-width: 768px) {
+    .auth-cart {
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Выравнивание по центру */
+        gap: 10px; /* Промежуток между иконками */
+    }
+}
 
-
+/* Для маленьких экранов */
+@media (max-width: 480px) {
+    .auth-cart {
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Выравнивание по центру */
+        gap: 5px; /* Промежуток между иконками */
+    }
+}
